@@ -1,0 +1,91 @@
+CREATE DATABASE  dbs;
+
+
+CREATE TABLE students (
+
+ID      SERIAL  NOT NULL,
+  
+name    VARCHAR(50) NOT NULL,
+
+password VARCHAR(30) NOT NULL,
+  
+email_address VARCHAR(50) NOT NULL,
+  
+phone_number INTEGER,
+
+PRIMARY KEY(ID)
+);
+
+
+
+CREATE TABLE teachers (
+  
+ID  SERIAL NOT NULL,
+  
+name VARCHAR(50) NOT NULL,
+  
+password VARCHAR(30) NOT NULL,
+  
+email_address VARCHAR(50) NOT NULL,
+  
+phone_number INTEGER,
+  
+PRIMARY KEY(ID)
+);
+
+
+
+CREATE TABLE classes (
+  
+ID  SERIAL NOT NULL,
+  
+name VARCHAR(50) NOT NULL,
+  
+teacher_id SERIAL,
+  
+PRIMARY KEY(ID),
+  
+FOREIGN KEY(teacher_id) REFERENCES teachers
+);
+
+
+CREATE TABLE problems (
+            
+ID SERIAL  NOT NULL,
+            
+type_id  SMALLINT NOT NULL,
+            
+name VARCHAR(50) NOT NULL,
+            
+content text NOT NULL,
+            
+result real NOT NULL,
+            
+max_points smallint,
+            
+PRIMARY KEY(ID),
+            
+FOREIGN KEY (type_id) REFERENCES problem_types
+)
+);
+
+
+CREATE TABLE problem_types (
+  
+ID      smallserial  NOT NULL,
+  
+name	  varchar(50) NOT NULL,
+  
+PRIMARY KEY(ID)
+)
+
+
+treba dorobiù:
+HIGH PRIORITY
+Dokument·cia (Opisy scen·rov)
+zmena serial na int v tabuæke kurzy, zmena hodnÙt v tabuæk·ch najm‰ tie varchar(50), pregenerovanie datab·z
+LOW PRIORITY
+sp‰tnÈ naËÌtanie z·znamov do listu po update
+osobitne GUI pre Ziaka a pre Ucitela
+Spojazdniù slider aj s labelom
+Upraviù spÙsob registr·cie

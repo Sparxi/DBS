@@ -1,0 +1,13 @@
+CREATE TABLE problems_students (
+id SERIAL NOT NULL,
+student_id integer NOT NULL,
+problem_id integer NOT NULL,
+points smallint NUT NULL,
+PRIMARY KEY(ID)
+,
+FOREIGN KEY (student_id) REFERENCES students
+
+,
+FOREIGN KEY (problem_id) REFERENCES problems,
+UNIQUE(student_id, problem_id)
+);

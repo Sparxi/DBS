@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="id_text" editable="false" layoutX="200.0" layoutY="20.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="typ_text" editable="false" layoutX="200.0" layoutY="50.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="nazov_text" editable="false" layoutX="200.0" layoutY="80.0" prefHeight="25.0" prefWidth="200.0" />
+      <Label layoutX="15.0" layoutY="20.0" text="ID Príkladu:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="80.0" text="Názov príkladu:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="50.0" text="Typ príkladu:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="110.0" text="Maximálny počet bodov:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="180.0" text="Znenie príkladu:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="max_text" editable="false" layoutX="200.0" layoutY="110.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextArea fx:id="znenie_text" editable="false" layoutX="200.0" layoutY="140.0" prefHeight="100.0" prefWidth="200.0" />
+      <Label fx:id="error_label" layoutX="15.0" layoutY="320.0" text="Nepodarilo sa vykonať zmeny. Zadali ste zlý typ príkladu." textFill="RED" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
